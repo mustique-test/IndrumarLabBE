@@ -22,6 +22,8 @@
 %\RequirePackage[utf8]{inputenc}
 \RequirePackage[romanian]{babel}
 
+% \RequirePackage{rom}
+
 % Geometry
 %--------------------------------------------------------------------------
 \RequirePackage[top=2.5cm,bottom=2.5cm,left=3cm,right=3cm,
@@ -294,6 +296,20 @@ contents={\includegraphics[width=\paperwidth,height=\paperheight]{cover}}}
  borderline west={1.5mm}{-2mm}{tsforestgreen}]}
 {\end{tcolorbox}}
 
+\newenvironment{boxobserv}
+{\begin{tcolorbox}
+[enhanced jigsaw,breakable,pad at break*=1mm,
+ colback=yellow!10!white,boxrule=0pt,frame hidden,
+ borderline west={0.7mm}{-2mm}{tsforestgreen}]}
+{\end{tcolorbox}}
+
+\newenvironment{boxindicatie}
+{\begin{tcolorbox}
+[enhanced jigsaw,breakable,pad at break*=1mm,
+ colback=yellow!10!white,boxrule=0pt,frame hidden,
+ borderline west={0.4mm}{-2mm}{tsforestgreen}]}
+{\end{tcolorbox}}
+
 \newenvironment{boxexercise}
 {\begin{tcolorbox}
 [enhanced jigsaw,breakable,pad at break*=1mm,
@@ -340,6 +356,18 @@ contents={\includegraphics[width=\paperwidth,height=\paperheight]{cover}}}
  \nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}
  \thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black} (#3)}}
 
+\newtheoremstyle{styleobserv}
+{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{\;}{0.25em}
+{\small\sffamily\color{tsforestgreen}\thmname{#1}
+ \nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}
+ \thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black} (#3)}}
+
+\newtheoremstyle{styleindicatie}
+{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{\;}{0.25em}
+{\small\sffamily\color{tsforestgreen}\thmname{#1}
+ \nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}
+ \thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black} (#3)}}
+
 \newtheoremstyle{styleexercise}
 {0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{\;}{0.25em}
 {\small\sffamily\color{black}\thmname{#1}
@@ -352,18 +380,31 @@ contents={\includegraphics[width=\paperwidth,height=\paperheight]{cover}}}
 \newtheorem{envtheorem}{Theorem}[chapter]
 \newtheorem{envlemma}{Lemma}[chapter]
 \theoremstyle{styleexercise}
-\newtheorem{envexercise}{Exerci\c{t}iul}[chapter]
+\newtheorem{envexercise}{Exercitiul}[chapter]
 \newtheorem{envproblem}{Problem}[chapter]
 \newtheorem{envprogramming}{Computer exercise}[chapter]
 \newtheorem{envexample}{Exemplul}[chapter]
 \theoremstyle{styletheorem}
 \newtheorem*{envretine}{De re\c{t}inut}
+% mihai 06/03/2020
+\theoremstyle{styleobserv}
+\newtheorem*{envobserv}{Observa\c{t}ii}
+\theoremstyle{styleindicatie}
+\newtheorem*{envindicatie}{Indica\c{t}ie}
 
 % Environments for theorems
 %--------------------------------------------------------------------------
 \newenvironment{definition}
                {\begin{boxdefinition}\begin{envdefinition}}
                {\end{envdefinition}\end{boxdefinition}}
+
+\newenvironment{observ}
+               {\begin{boxobserv}\begin{envobserv}}
+               {\end{envobserv}\end{boxobserv}}
+
+\newenvironment{indicatie}
+               {\begin{boxindicatie}\begin{envindicatie}}
+               {\end{envindicatie}\end{boxindicatie}}
 
 \newenvironment{theorem}
                {\begin{boxtheorem}\begin{envtheorem}}
