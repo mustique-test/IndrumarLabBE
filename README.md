@@ -36,6 +36,7 @@ Versiunea stabila va fi ruxandrab/IndrumarLabBE (branch master).
 Aici vor fi toate fisierele necesare pentru generarea unui pdf pe local fara erori.
 Aceasta versiune va fi intotdeauna actualizata de mine in urma unui Pull request .
 Tot in ruxandrab/IndrumarLabBE va fi intotdeauna un pdf denumit main_indrumar_versiune_stabila_llmmaaaa.pdf, care e “versiunea stabila curenta”, pe care il voi regenera dupa fiecare Pull request acceptat.
+Deci, daca descarcati versiunea curenta si generati fisierul .pdf, acesta trebuie sa fie identic cu fisierul main_indrumar_versiune_stabila_llmmaaaa.pdf.
 
 
 
