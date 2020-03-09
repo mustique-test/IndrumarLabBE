@@ -9,8 +9,7 @@
 \subsubsection*{\color{blue} Divizorul de tensiune rezistiv 'in gol}
 
 Figura \ref{fig:divizor_schema} prezint'a schema de principiu a unui divizor de tensiune rezistiv, 'in diferite variante de desenare. Tensiunea $U = V_+ - V_- = V_+|_{V_-=0}$ se aplic'a ansamblului de rezistoare conectate 'in serie, distribuindu-se 'in $U_1$ 'si $U_2=V_a - V_- = V_a|_{V_-=0}$.
-
-\begin{figure}
+\begin{figure}[h]
 	\centering
 		\includegraphics[width=0.75\textwidth]{laborator_01/figuri/scheme_divizor}
 	\caption{Divizorul de tensiune -- schema de principiu 'in diferite variante de desenare.}
@@ -25,7 +24,7 @@ U_1 = \frac{R_1}{R_1+R_2}U
 U_2 = \frac{R_2}{R_1+R_2}U.
 \end{equation}
 
-\begin{exercise}[Pe foaie de h\^artie, 'inainte de laborator]
+\begin{exercise}%[Pe foaie de h\^artie, 'inainte de laborator]
 Demonstra'ti rela'tiile (\ref{eq:tensiune_intrare_gol}) 'si (\ref{eq:tensiune_iesire_gol}).
 \end{exercise}
 
@@ -89,7 +88,7 @@ U_2 = \frac{R_2\parallel R_s}{R_1+R_2\parallel R_s}U,
 \end{equation}
 unde $R_2\parallel R_s$ este o nota'tie pentru rezisten'ta echivalent'a a dou'a rezistoare conectate 'in paralel $R_2\parallel R_s = \frac{R_2R_s}{R_2+R_s}$.
 
-Dac'a se dore'ste o tensiune de ie'sire aproximativ egal'a cu cea de la sec'tiunea precedent'a (ie'sire 'in gol), atunci rezisten'ta de sarcin'a $R_s$ trebuie aleas'a astfel 'inc\^at s'a fie mult mai mare decat $R_2$ (de exemplu $R_s \approx 100R_2$), ceea ce ar determina ca $R_2\parallel R_s \approx R_2$:
+Dac'a se dore'ste o tensiune de ie'sire aproximativ egal'a cu cea de la sec'tiunea precedent'a (ie'sire 'in gol), atunci rezisten'ta de sarcin'a $R_s$ trebuie aleas'a astfel 'inc\^at s'a fie mult mai mare dec\^at $R_2$ (de exemplu $R_s \approx 100R_2$), ceea ce ar determina ca $R_2\parallel R_s \approx R_2$:
 
 \begin{equation}\label{eq:sarcina}
 R_2 \parallel R_s = \frac{R_2 R_s}{R_2+R_s}\approx \frac{R_2 R_s}{R_s}=R_2, \text{ dac'a } R_s \gg R_2.
@@ -120,8 +119,8 @@ V_b = \frac{R_3}{R_3+R_4}U.
 Puntea este \textit{'in echilibru} dac'a $V_a=V_b$, adic'a dac'a cele dou'a
 divizoare au acela'si factor de divizare. Egal\^and rela'tiile (\ref{eq:tensiuni_punte_Va}) 'si (\ref{eq:tensiuni_punte_Vb}), reiese u'sor c'a pentru echilibru trebuie s'a avem rela'tia urm'atoare 'intre rezisten'te: $R_1 R_3 = R_2 R_4$.
 
-\begin{exercise}[pe foaie de h\^artie, 'inainte de laborator]
-Ce se 'int\^ampl'a dac'a 'intre (a) 'si (b) se conecteaz'a o rezisten't'a $R_5$? Dar dac'a se face un scurt-circuit? Dar dac'a 'intre (a) 'si (b) se conecteaz'a o SIT?
+\begin{exercise}%[pe foaie de h\^artie, 'inainte de laborator]
+Ce se 'int\^ampl'a dac'a 'intre (a) 'si (b) se conecteaz'a o rezisten't'a $R_5$? Dar dac'a se face un scurt-circuit? Dar dac'a 'intre (a) 'si (b) se conecteaz'a o surs'a ideal'a de tensiune (SIT)?
 \end{exercise}
 
 \subsection*{Circuitele ca sisteme}\label{subsection:ca_sisteme}
@@ -141,14 +140,14 @@ O reprezentare sistemic'a a divizorului de tensiune este 'in Fig. \ref{fig:diviz
 
 Observa'ti c'a reprezentarea sistemic'a se face cu un ''bloc'' 'in care se v'ad semnalele de intrare (unul 'in acest caz) 'si semnalele de ie'sire (unul 'in acest caz, tensiunea $U_2$), iar pe figura care reprezint'a sistemul se marcheaz'a ''func'tia de transfer'', 'in cazul nostru o constant'a $H = \frac{1}{1+\alpha}$, astfel 'inc\^at $U_2 = HU$.
 
-\begin{exercise}[pe foaie de h\^artie, 'inainte de laborator]
+\begin{exercise}%[pe foaie de h\^artie, 'inainte de laborator]
   Realiza'ti o reprezentare sistemic'a a pun'tii rezistive.
 \end{exercise}
 
 
 \subsection*{Propagarea erorilor}
 
-Componentele reale folosite 'in asamblarea circuitelor nu pot fi realizate perfect. Parametrii lor au anumite toleran'te, precizate de fabricant. De aceea, 'in proiectarea unui circuit, nu este important'a numai verificarea func'tion'arii dorite ci 'si comportarea circuitului pe 'intreaga gam'a de varia'tie a parametrilor respectivi, impus'a de tehnologia de realizare a componentelor.
+Componentele reale folosite 'in asamblarea circuitelor nu pot fi realizate perfect. Parametrii lor au anumite toleran'te, precizate de fabricant. De aceea, 'in proiectarea unui circuit, nu este important'a numai verificarea func'tion'arii dorite, ci 'si comportarea circuitului pe 'intreaga gam'a de varia'tie a parametrilor respectivi, impus'a de tehnologia de realizare a componentelor.
 
 'In cazul exemplelor analizate 'in aceast'a lucrare, rezistoarele sunt realizate cu anumite toleran'te, marcate pe element (de exemplu 5\%, 10\%). Aceste toleran'te trebuie interpretate ca \textit{margini ale erorilor relative}.
 
@@ -180,7 +179,7 @@ R_1 \in [R_{1,\mathrm{nom}}(1-r_1), R_{1,\mathrm{nom}}(1+r_1)]
    \begin{equation*}
     	a_1 = \frac{5}{100}\cdot 2 \cdot 10^3~\Omega = 100~\Omega = 0.1~\mathrm{k}\Omega
   \end{equation*}
-  Deci valoarea real'a $R_1 \in [99.9, 100.1]~\mathrm{k\Omega}$.
+  Deci valoarea real'a $R_1 \in [1.9, 2.1]~\mathrm{k\Omega}$.
 \end{example}
 
 \begin{retine}
@@ -289,15 +288,15 @@ Similar, la 'imp'ar'tirea $y=\frac{x_1}{x_2}$ rezult'a $r_y = r_{x_1} + r_{x_2}$
 \end{figure}
 
 \begin{example}[]
-  Fie divizorul de tensiune 'in care datele au toleran'tele marcate pe Fig. \ref{fig:exemplu_erori}.
-
+  Fie divizorul de tensiune 'in care datele au toleran'tele marcate pe Fig.~\ref{fig:exemplu_erori}.
+%
 S'a calcul'am
 \begin{equation} \label{eq:exemplu_erori}
 U_2 = \frac{R_2}{R_1+R_2}U,
 \end{equation}
 valoarea nominal'a 'si eroarea ei, aplic\^and cele dou'a reguli de mai sus.
 
-vom efectua calculele 'in urm'atoarea ordine:
+Vom efectua calculele 'in urm'atoarea ordine:
 \begin{enumerate}
 \item Adunarea $R_1+R_2$
 \item 'Imp'ar'tirea dintre $R_2$ 'si rezultatul adun'arii de la punctul 1.
@@ -342,7 +341,7 @@ U_2 &\in \left[3.46, 4.54\right]~\mathrm{V}.
 \end{enumerate}
 \end{example}
 
-'In preg'atirea laboratorului, v'a recomand'am ca toate aceste cacule s'a le face'ti 'intr-o foaie de calcul organizat'a ca 'in Fig. \ref{fig:divizor_tensiune_excel1}.
+'In preg'atirea laboratorului, v'a recomand'am ca toate aceste calcule s'a le face'ti 'intr-o foaie de calcul organizat'a ca 'in Fig. \ref{fig:divizor_tensiune_excel1}.
 
 \begin{figure}
 	\centering
@@ -351,10 +350,10 @@ U_2 &\in \left[3.46, 4.54\right]~\mathrm{V}.
 	 \label{fig:divizor_tensiune_excel1}
 \end{figure}
 
-\begin{exercise}[fi'sier .xls, 'inainte de laborator]
+\begin{exercise}%[fi'sier .xls, 'inainte de laborator]
   Relua'ti ra'tionamentul de mai sus 'si completa'ti o foaie de calcul 'in care s'a evalua'ti semnalul de ie'sire $U_2$ pentru un divizor de tensiune 'in sarcin'a, consider\^and urm'atoarele toleran'te pentru parametri 'si semnalul de intrare: $R_1 = 2~\Omega\pm5\%$, $R_2 = 4~\Omega\pm10\%$, $R_s = 4~\mathrm{k}\Omega\pm10\%$, $U = 18~V\pm0.5\%$.
 \end{exercise}
-\begin{exercise}[fi'sier .xls, 'inainte de laborator]
+\begin{exercise}%[fi'sier .xls, 'inainte de laborator]
   Relua'ti ra'tionamentul de mai sus pentru calculul $V_a-V_b$ pentru o punte rezistiv'a, unde valorile nominale ale rezistoarelor sunt: $R_1 = 2~\Omega$, $R_2 = 6~\Omega$, $R_3 = 9~\Omega$, $R_4 = 3~\Omega$, toate rezistoarele au toleran'ta $5\%$, iar $U = 20~\mathrm{V}\pm0.1\%$.
 \end{exercise}
 
@@ -362,6 +361,6 @@ U_2 &\in \left[3.46, 4.54\right]~\mathrm{V}.
 
 %Pentru a verifica 'in'telegerea conceptelor descrise 'in acest capitol, rula'ti chestionarul 2 (vezi Anexa 2) de pe moodle.
 
-\begin{exercise}[Pe moodle, 'inainte de laborator]
-Efectua'ti chestionarul de antrenament de pe moodle ("Concepte") pentru a ob'tine un punctaj c\^at mai mare.
+\begin{exercise}%[Pe moodle, 'inainte de laborator]
+Efectua'ti chestionarul de antrenament de pe moodle ("Concepte").
 \end{exercise}
