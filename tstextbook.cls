@@ -193,7 +193,8 @@ contents={\includegraphics[width=\paperwidth,height=\paperheight]{cover}}}
   \textsc{\@tstitle}
 
   \bigskip
-  \smallskip
+  \bigskip
+  \bigskip
 
   \LARGE
   \textsc{\@tsauthor} \\[1em]
