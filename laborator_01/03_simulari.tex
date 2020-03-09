@@ -1,6 +1,7 @@
 \section{Simul'ari}
-
+\label{sec:ltspice}
 \subsection*{LTSpice}
+
 
 LTSpice este un simulator de circuite, 'in care circuitele pot fi descrise ca un fi'sier text cu o list'a de elemente, numit \textit{netlist} sau ca o schema de circuit (desen), numit'a \textit{schematics} \cite{ltspice}. Este util'a 'in'telegerea modului de lucru 'in ambele variante, avantajele 'si dezavantajele lor.
 
@@ -54,7 +55,7 @@ Pentru crearea netlistului, circuitul trebuie preg'atit astfel:
 \begin{retine}
   \label{retine3_1}
   \index{}
-    'In cazul surselor ideale de tensiune este obligatorie reprezentarea sensului de referin't'a al curentului ca 'in Fig. \ref{fig:spice_ex1_1_2} dreapta.
+    'In cazul surselor ideale de tensiune este obligatorie reprezentarea sensului de referin't'a al curentului 'in sens opus sensului tensiunii electromotoare (ca 'in Fig. \ref{fig:spice_ex1_1_2} dreapta).
 \end{retine}
 
 %\begin{figure}
@@ -90,7 +91,7 @@ R2 a  0 180 \\
 \begin{itemize}
 \item[--] Liniile care 'incep cu * reprezint'a comentarii.
 \item[--] Prima linie din fi'sier este intotdeauna interpretat'a ca un comentariu.
-\item[--] Fiecare linie reprezint'a o latura (un element).
+\item[--] Fiecare linie reprezint'a o latur'a (un element).
 \item[--] Primul caracter al unei linii indic'a tipul elementului (de ex. V pentru SIT, R pentru rezistor).
 \item[--] Sintaxa liniei de tip SIT este:
 
@@ -118,9 +119,9 @@ Rezultatul simul'arii acestui netlist este Fig. \ref{fig:spice_ex1_3}. Observa't
 	\label{fig:spice_ex1_5}
 \end{figure}
 
-Generarea schemei se face intuitiv, printr-o interfa't'a grafic'a (Fig. \ref{fig:spice_ex1_4}). Rularea se face apasand pe butonul Run \includegraphics[width=0.03\textwidth]{laborator_01/figuri/spice_Run_icon}. Dac'a a fost omis'a comanda de simulare, atunci programul conduce automat c'atre o fereastr'a de unde se stabile'ste tipul de simulare (Fig. \ref{fig:spice_ex1_5}).
+Generarea schemei se poate face 'si printr-o interfa't'a grafic'a (Fig. \ref{fig:spice_ex1_4}). Rularea se face apasand pe butonul Run \includegraphics[width=0.03\textwidth]{laborator_01/figuri/spice_Run_icon}. Dac'a a fost omis'a comanda de simulare, atunci programul conduce automat c'atre o fereastr'a de unde se stabile'ste tipul de simulare (Fig. \ref{fig:spice_ex1_5}).
 
-'In schematics, etichetarea unui nod se face din Meniul \textbf{Edit $\rightarrow$ Label Net} sau direct cu \textbf{F4}, iar generarea fi'sierului netlist se face din meniul \textbf{View $\rightarrow$ SPICE Netlist}. Netlist-ul poate fi salvat ca fi'sier separat pentru modific'ari ulterioare cu click-dreapta 'in fereastr'a 'si alegerea \textbf{Edit as Independent netlist}.
+'In {\em schematics}, etichetarea unui nod se face din Meniul \textbf{Edit $\rightarrow$ Label Net} sau direct cu \textbf{F4}, iar generarea fi'sierului netlist se face din meniul \textbf{View $\rightarrow$ SPICE Netlist}. Netlist-ul poate fi salvat ca fi'sier separat pentru modific'ari ulterioare cu click-dreapta 'in fereastr'a 'si alegerea \textbf{Edit as Independent netlist}.
 
 Mai multe detalii despre SPICE se g'asesc 'in \cite{ltspice} 'si \cite{ltspicewiki}.
 
@@ -147,34 +148,34 @@ Putem analiza 'in Spice 'si cazul cel mai defavorabil (\textit{worst-case scenar
 Fig. \ref{fig:spice_tolerante_wc} con'tine schema 'si rezultatele pentru 50 de simulari de acest tip. Valorile tensiunii de ie'sire sunt 'in intervalul $[1.8365, 2.17]$, ceea ce corespunde unei erori relative de $V_a \in \left[2-6.95\%, 2+7.325\%\right]$.
 \end{definition} 
 
-\begin{figure}[t]
+\begin{figure}[h]
 	\centering
 		\includegraphics[width=0.42\textwidth]{laborator_01/figuri/spice_schematics_tolerante}
 		\includegraphics[width=0.5\textwidth]{laborator_01/figuri/spice_rezultate_tolerante}
-	\caption{Divizor de tensiune 'in gol -- m'arimi cu toleran'te, schematics 'si rezultate.}
+	\caption{Divizor de tensiune 'in gol -- m'arimi cu toleran'te, {\em schematics} 'si rezultate.}
 	\label{fig:spice_tolerante}
-\end{figure}
-\begin{figure}[t]
+%\end{figure}
+%\begin{figure}[h]
 	\centering
-		\includegraphics[width=0.7\textwidth]{laborator_01/figuri/spice_schematics_tolerante_wc}\\
-		\includegraphics[width=0.7\textwidth]{laborator_01/figuri/spice_rezultate_tolerante_wc}
-	\caption{Divizor de tensiune 'in gol -- m'arimi cu toleran'te, ''worst-case scenario'', schematics 'si rezultate.}
+		\includegraphics[width=0.6\textwidth]{laborator_01/figuri/spice_schematics_tolerante_wc}\\
+		\includegraphics[width=0.6\textwidth]{laborator_01/figuri/spice_rezultate_tolerante_wc}
+	\caption{Divizor de tensiune 'in gol -- m'arimi cu toleran'te, {\em worst-case scenario}, {\em schematics} 'si rezultate.}
 	\label{fig:spice_tolerante_wc}
 \end{figure}
-\begin{figure}[b]
-	\centering
-		\includegraphics[width=\textwidth]{laborator_01/figuri/divizor_tensiune_excel2}
-	\caption{Divizor de tensiune 'in gol -- foaie de calcul cu m'arimi calculate 'si simulate.}
-	\label{fig:divizor_tensiune_excel2}
-\end{figure}
+
+\newpage
 
 'In acest moment putem preg'ati o foaie de calcul 'in care s'a trecem valorile calculate 'si valorile rezultate 'in urma simul'arii, ca in Fig. \ref{fig:divizor_tensiune_excel2}.
 
-
-\begin{exercise}[fi'sier \textit{.cir} sau \textit{.asc}, fi'sier \textit{.xls}, 'inainte de laborator]
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{laborator_01/figuri/divizor_tensiune_excel2}
+	\caption{Divizor de tensiune 'in gol -- foaie de calcul cu m'arimi calculate 'si simulate.}
+	\label{fig:divizor_tensiune_excel2}
+\end{figure}
+\begin{exercise}%[fi'sier \textit{.cir} sau \textit{.asc}, fi'sier \textit{.xls}, 'inainte de laborator]
   Analiza'ti 'si simula'ti divizorul de tensiune 'in sarcin'a. Preg'ati'ti o foaie de calcul potrivit'a.
 \end{exercise}
-\begin{exercise}[fi'sier \textit{.cir} sau \textit{.asc}, fi'sier \textit{.xls}, 'inainte de laborator]
+\begin{exercise}%[fi'sier \textit{.cir} sau \textit{.asc}, fi'sier \textit{.xls}, 'inainte de laborator]
   Analiza'ti 'si simula'ti puntea rezistiv'a. Preg'ati'ti o foaie de calcul potrivit'a.
 \end{exercise}
-
